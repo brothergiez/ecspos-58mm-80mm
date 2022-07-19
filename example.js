@@ -38,6 +38,17 @@ async function f() {
     .fontSize(1)
     .textCenter('Terima Kasih')
     .newLine(2);
+  //Barcode
+  cmd.textCenter("Barcode(EAN-13)")
+  .newLine()
+  .barcode("123456789012")
+  .newLine(2)
+
+  //QR
+  .textCenter("QR Code")
+  .newLine();
+  await cmd.qrcode("Halo, Saya Cristoph Adam Sugianto");
+  cmd.newLine(2);
   await printer.write(cmd.export());
 }
 
