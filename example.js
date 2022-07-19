@@ -47,7 +47,7 @@ async function f() {
   //QR
   .textCenter("QR Code")
   .newLine();
-  await cmd.qrcode("Halo, Saya Cristoph Adam Sugianto");
+  await cmd.qrcode("Halo, Saya Cristoph Adam Sugianto", 8);
   cmd.newLine(2);
   await printer.write(cmd.export());
 }
